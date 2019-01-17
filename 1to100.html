@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="demo"></ul>
+</body>
+<script>
+var n=100;
+  function print(n){
+let data=document.getElementById("demo");
+   for(var x =1;x<=n;x++){
+        if(x%2==0 && x%3==0){
+        //   console.log(data);
+             data.innerHTML+=`<li>The number ${x} is divisible by both 2 and 3</li>`;
+        }
+        else if(x%3==0){
+           data.innerHTML+=`<li> The number ${x} is dicisible by 3 </li>`;
+        }
+        else{
+            if(x%2 == 0){
+            data.innerHTML+=`<li>The number ${x} is even </li>`;
+            }
+            else{
+               data.innerHTML+=`<li>The number ${x} is odd </li>`;
+            }
+        }
+   }
+  };
+  print(n);
+</script>
+</html>
